@@ -13,19 +13,20 @@
     $query->execute();
     $post = $query->fetchObject();    
   ?>
-
+  
   <h1><?php echo $post->id; ?> : <?php echo $post->title; ?>  </h1>
   <p><?php echo $post->body; ?></p>
 
   
   
   我要评论
-  <form action="../comments/save.php" method="post">
+  <form action="save1.php" method="post">
     <input type="hidden" name='post_id' value='<?php echo $_GET['id']; ?>'/>
-    <label for="title">title</label>
-    <input type="text" name="title" value="" />
+    <input type="hidden" name='content' value='huodong'/>
+    <label for="uname">名字</label>
+    <input type="text" name="uname" value="" />
     <br/>
-    <label for="body">body</label>
+    <label for="body">内容</label>
     <textarea name="body"></textarea>
     <br/>
     <input type="submit" value="提交" />
@@ -33,11 +34,11 @@
 
   <ol>
   <?php
-    $query = $db->query('select * from comments where post_id = ' . $_GET['id']);
+    $query = $db->query('select * from comments where content= "huodong" and post_id = ' . $_GET['id']);
     while ( $comment =  $query->fetchObject() ) {
       ?>
           <li>
-            <h4><?php echo $comment->title; ?></h4>
+            <h4><?php echo $comment->uname; ?></h4>
             <span><?php echo $comment->created_at;?></span>
             <p><?php echo $comment->body; ?></p>            
           </li> 

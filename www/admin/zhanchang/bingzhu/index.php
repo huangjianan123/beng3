@@ -26,16 +26,16 @@
           <?php 
         require_once $_SERVER['DOCUMENT_ROOT'].'./assets/inc/db.php';
         
-        $query = $db->query('select * from posts');
-        while ( $post =  $query->fetchObject() ) {
+        $query = $db->query('select * from bingzhu');
+        while ( $bingzhu =  $query->fetchObject() ) {
           
       ?>
           <tr>
-            <td><a href="show.php?id=<?php print $post->id; ?>"><?php echo $post->title; ?></a></td>
-            <td><?php echo $post->created_at; ?></td>
+            <td><a href="show.php?id=<?php print $bingzhu->id; ?>"><?php echo $bingzhu->title; ?></a></td>
+            <td><?php echo $bingzhu->created_at; ?></td>
             <td> 
-              <a href="edit.php?id=<?php echo $post->id; ?>">改</a> 
-              <a href="delete.php?id=<?php echo $post->id; ?>">删</a> 
+              <a href="edit.php?id=<?php echo $bingzhu->id; ?>">改</a> 
+              <a href="delete.php?id=<?php echo $bingzhu->id; ?>">删</a> 
             </td>        
           </tr> 
  

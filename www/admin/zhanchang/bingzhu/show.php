@@ -1,4 +1,4 @@
-<!doctype html>
+                         <!doctype html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -24,6 +24,7 @@
           <a href="https://www.bilibili.com/video/<?php echo $bingzhu->av ?>">视频</a>
         <?php   }  ?>
         <br/>
+  
   我要评论
   <form action="save1.php" method="post">
     <input type="hidden" name='post_id' value='<?php echo $_GET['id']; ?>'/>

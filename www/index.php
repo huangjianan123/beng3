@@ -12,13 +12,10 @@
         <ul>
            <li><a href="index.php">主页</a></li>
            <li><a href="/pages/zhanchang/index.php">战场</a></li>
-           <li><a href="/pages/shenyuan/index.php">深渊</a></li>
-           <li><a href="/pages/meitu/index.php">CG</a></li>
            <li><a href="https://mihoyo.tmall.com/">周边</a></li>
         </ul>
-        </div>
-
-
+  </div>
+           <a href="/admin/session/new.php" style = "float: right">管理员登陆</a>
   <table border=1 align="center">
     <caption><h1>活动列表</h1></caption>
     <thead>
@@ -51,10 +48,11 @@
     </tbody>
   </table>
 
+  
 
 
 
-    <footer
+    <footer>
 
       <div class="foot">
         <ul>
